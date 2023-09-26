@@ -39,7 +39,7 @@ Login_Functionality lg;
     @Test(dataProvider = "setdata",dataProviderClass = Utils.class)
 	public void verifyurl(String username,String password) throws InterruptedException
 	{
-		lg.validateLogin(username,password);
+		lg.validateLogin();
 		String url=driver.getCurrentUrl();
 		Assert.assertEquals("http://e-quarz.com/", url);
 	}
